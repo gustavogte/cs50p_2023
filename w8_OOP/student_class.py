@@ -12,15 +12,14 @@ class Student:
         return f"{self.name} from {self.house}"
 
     def charm(self):
-        match self.patronus:
-            case "Stag":
-                return "🐴"
-            case "Otter":
-                return "🦆"
-            case "Jach Russell terrier":
-                return "🐕"
-            case _:
-                return "🪄"
+        if self.patronus == "Stag":
+            return "🐴"
+        elif self.patronus == "Otter":
+            return "🦆"
+        elif self.patronus == "Jach Russell terrier":
+            return "🐕"
+        else:
+            return "🪄"
 
 
 def main():
